@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocab Web App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+        }
+
+        #image {
+            margin-top: 20px;
+        }
+
+        #image img {
+            width: 200px;
+        }
+
+        #wake-word {
+            font-size: 24px;
+            color: #333;
+            margin-top: 10px;
+        }
+
+        #arabic-text {
+            font-size: 50px;
+            font-family: 'Amiri', serif; /* Use Google font Amiri for prettier Arabic */
+            color: #333;
+            margin-top: 150px;  /* Ensure the Arabic text is much lower on the page */
+            display: none; /* Hidden by default */
+        }
+    </style>
+
+    <!-- Link to Google Font for prettier Arabic text -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <h1>Vocab Web App</h1>
+    <button id="start-btn">Start Transcribing</button>
+
+    <!-- Image Section -->
+    <div id="image"></div>
+
+    <!-- Wake word text (shown immediately below the image) -->
+    <div id="wake-word"></div>
+
+    <!-- Arabic text, hidden initially and located much further down the screen -->
+    <div id="arabic-text"></div>
+
+    <!-- Beep audio file (you will need to place beep.mp3 in the same folder) -->
+    <audio id="beep-sound" src="beep.mp3"></audio>
+
+    <script src="app.js"></script>
+</body>
+</html>
